@@ -1,0 +1,83 @@
+.recipe-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+.recipe-list .card {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+.recipe-list .card:hover {
+  transform: rotate(3deg);
+}
+.recipe-list .card h3 {
+  color: #555;
+  margin-bottom: 6px;
+}
+.recipe-list .card p {
+  color: #999;
+  font-size: 0.9em;
+}
+.recipe-list .card div {
+  color: #555;
+  font-size: 0.7em;
+  margin: 20px 0;
+  line-height: 1.5em;
+}
+.recipe-list .card a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9em;
+  width: 100px;
+  text-align: center;
+  width: 120px;
+  padding: 8px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  margin: 20px auto 0;
+}
+.recipe-list .card a:hover {
+  background: #e2e2e2;
+}
+.delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  filter: invert(60%);
+}
+.recipe-list .card.dark {
+  background: #555;
+}
+.recipe-list .card.dark p,
+.recipe-list .card.dark h3,
+.recipe-list .card.dark div {
+  color: #e4e4e4;
+}
+.recipe-list .card.dark a {
+  color: #e4e4e4;
+  border: 2px solid #e4e4e4;
+}
+.recipe-list .card.dark a:hover {
+  background: #333;
+}
+
+@media (max-width: 640px) {
+  .recipe-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .recipe-list {
+    grid-template-columns: 1fr;
+  }
+}
